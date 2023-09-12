@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="479.0" prefWidth="613.0" spacing="20.0"
+   xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="com.example.controller.PrimaryController">
+   <children>
+      <ImageView fx:id="imageView">
+         <image>
+            <Image url="@./images/ResqLogo.png" />
+         </image>
+      </ImageView>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Plataforma do prestador" />
+      <GridPane prefHeight="60.0" prefWidth="513.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="439.0" minWidth="10.0" prefWidth="108.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="462.0" minWidth="10.0" prefWidth="454.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="24.0" prefWidth="110.0" text="Email" />
+            <TextField fx:id="txtEmail" onAction="#logIn" GridPane.columnIndex="1" />
+            <Label layoutX="10.0" layoutY="47.0" prefHeight="23.0" prefWidth="111.0" text="Senha"
+               GridPane.rowIndex="1" />
+            <TextField fx:id="txtSenha" layoutX="291.0" layoutY="43.0" onAction="#logIn"
+               GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button mnemonicParsing="false" onAction="#logIn" prefHeight="25.0" prefWidth="56.0"
+         text="Entrar" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Não Possui cadastro?" />
+      <Button onAction="#irParaTertiary" text="Cadastre-se aqui" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
